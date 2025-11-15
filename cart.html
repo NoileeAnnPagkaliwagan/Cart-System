@@ -1,44 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shopping Cart</title>
-	<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Cart System</title>
+  <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
+<body class="bg-yellow-100 text-yellow-100">
 
-<main style="background-color: #7ae9e9;">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-yellow-800 p-4">
+    <h1 class="text-xl font-bold text-center">🛒Cart System</h1>
+  </header>
 
+  <!-- Product -->
 
+  <main id="main">
+    <section class="bg-yellow-800 p-10 md:m-10 md:rounded-2xl md:shadow-sm text-center">
+      <h1 class="text-2xl text-white font-serif font-bold mb-6">Products</h1>
 
-    <h1 style="text-align: center; font-size: 24px; font-family: var(--font-mono);">Your Shopping Cart</h1>
+    <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-	<h1 style="padding: 10px; width: 250px; text-align: left; background-color: #dcfff9;">Products</h1>
-	<button id="btn">Piattos</button>
-    <div id="container">
-    </div>
-
-	<button id="btn">Lumpia</button>
-    <div id="container">
-    </div>
-
-	<button id="btn">Fries</button>
-    <div id="container">
-    </div>
-
-	<button id="btn">Chicharon</button>
-    <div id="container">
-    </div>
-
-	<button id="btn">Clover</button>
-    <div id="container">
-    </div>
-
-	<h1 style="padding: 10px; width: 250px; text-align: right; background-color: #dcfff9;">Cart</h1>
+        <div class="bg-yellow-100 text-yellow-800 font-bold p-4 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="addToCart(1200)">
+          <h3 class="text-lg font-semibold">Chanel</h3>
+          <img src="src/image/chanel.jpg" class="w-32 h-32 mx-auto object-cover rounded-md mt-2" alt="Bag">
+          <p class="italic mt-2 text-sm text-yellow-800">Chanel Classic Flap Bag</p>
+          <p class="mt-2 text-black font-semibold">₱664,502.00</p>
+        </div>
 
 
+        <div class="bg-yellow-100 text-yellow-800 font-bold p-4 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="addToCart(800)">
+          <h3 class="text-lg font-semibold">Shade</h3>
+          <img src="src/image/LV.avif" class="w-32 h-32 mx-auto object-cover rounded-md mt-2" alt="Shade">
+          <p class="italic mt-2 text-sm text-yellow-800">Louis Vuitton Shade</p>
+          <p class="mt-2 text-black font-semibold">₱111,142.00</p>
+        </div>
 
-	<script src="js/cart.js"></script>
+
+        <div class="bg-yellow-100 text-yellow-800 font-bold p-4 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="addToCart(950)">
+          <h3 class="text-lg font-semibold">Slipper</h3>
+          <img src="src/image/HM.webp" class="w-32 h-32 mx-auto object-cover rounded-md mt-2" alt="Slippers">
+          <p class="italic mt-2 text-sm text-yellow-800">Hermes Slipper</p>
+          <p class="mt-2 text-black font-semibold">₱49,396.00</p>
+        </div>
+
+        <div class="bg-yellow-100 text-yellow-800 font-bold p-4 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+        onclick="addToCart(950)">
+          <h3 class="text-lg font-semibold">Blanket</h3>
+          <img src="src/image/gucci.jpg" class="w-32 h-32 mx-auto object-cover rounded-md mt-2" alt="Blanket">
+          <p class="italic mt-2 text-sm text-yellow-800">Gucci Blanket</p>
+          <p class="mt-2 text-black font-semibold">₱61,838.00</p>
+        </div>
+
+    </article>
+    </section>
+
+
+    <article>
+
+    <!-- Cart-->
+    <section class="bg-yellow-200 p-10 md:m-10 md:rounded-2xl md:shadow-sm text-center">
+      <div class="bg-yellow-700 text-yellow-100 font-bold p-5 rounded-xl shadow-md">
+        <h2 class="text-xl mb-3">🛍️ Cart</h2>
+        <p class="text-lg">Total: <span id="cartTotal" class="text-yellow-100">₱0</span></p>
+      </div>
+    </section>
+
+    </article>
+    
+  </main>
+
+  <script src="process.js"></script>
+
 </body>
 </html>
